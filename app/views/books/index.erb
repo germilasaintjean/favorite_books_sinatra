@@ -1,0 +1,11 @@
+<h2>Your Books</h2>
+
+<button type="button" class="btn btn-default"><a href="/books/new">Create a New Book</a></button>
+
+<ul>
+  <% @books.each do |book| %>
+    <% if book.user_id == session[:user_id] %>
+      <li><a href="/books/<%= book.id %>" style="color: #ffffff"><%= book.name %>, <%= book.location %></a></li>
+    <% end %>
+  <% end %>
+</ul>
