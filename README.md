@@ -9,16 +9,16 @@ Favorite Books lets you sign up and create your favorite books(book name, genre.
 Fork and Clone
 Clone the repo $ git clone https://github.com/germilasaintjean/favorite_books_sinatra.git
 
-Switch to directory
+## Switch to directory
 $ cd favorite_books/
 
-Execute for dependencies
+## Execute for dependencies
 run "bundle install"
 
-Seed database
+## Seed database
 run 'rake db:migrate'
 
-Seed database
+## Seed database
 run 'shotgun' and open the link on your browser
 
 ## About Usage
