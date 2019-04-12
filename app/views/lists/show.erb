@@ -1,0 +1,16 @@
+<h2><%= @list.title %></h2>
+
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<br>
+<p>
+  <%= @list.content %>
+</p>
+
+<form action="/books/<%= @list.book_id %>/lists/<%= @list.id %>/delete" method="post">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+  <button type="button" class="btn btn-default" name="edit_content"><a href="/books/<%= @list.book_id %>/lists/<%= @list.id %>/edit">Edit List</a></button>
+  <input type="submit" class="btn btn-default" value="Delete List">
+  <button type="button" class="btn btn-default" name="return_to_books"><a href="/books/<%= @list.book_id %>">Return to Book</a></button>
+</form>
