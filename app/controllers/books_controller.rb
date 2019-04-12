@@ -27,7 +27,7 @@ class BooksController < ApplicationController
           erb :'/books/new', locals: {message: "There seems to be an error. Please try again."}
         else
           user = current_user
-          @book = Book.create(name: params[:name], genre: params[:genre], user: user_id)
+          @book = Book.create(name: params[:name], genre: params[:genre], user_id: user.id)
           redirect "/books/#{@book.id}"
         end
       end
