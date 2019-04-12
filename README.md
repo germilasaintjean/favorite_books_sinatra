@@ -6,7 +6,7 @@ This is  a fully functionnal CRUD application built with Sinatra's framework
 
 
 ## Overview
-Favorite Books lets you sign up and create your favorite books(book name, genre...)  by creating a account and have the amability to save and modify there own books. you can view edit and delete yur own entries but only view other people's entries.This application is meant to create easy and simple lists.
+Favorite Books lets you sign up and create your favorite books(book name, genre...)  by creating a account and have the amability to save and modify there own books. you can view edit and delete your own entries but only view other people's entries.This application is meant to create easy and simple lists.
  
  
  ## For making a great Installation
