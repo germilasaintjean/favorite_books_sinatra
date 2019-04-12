@@ -2,6 +2,6 @@
 
 <ul>
   <% @books.each do |book| %>
-    <li><a href="/books/<%= book.id %>" style="color: #ffffff"><%= book.name %> in <%= book.location %>, by <%= book.creator %></a></li>
+    <li><a href="/books/<%= book.id %>" style="color: #ffffff"><%= book.name %> in <%= book.genre %>, by <%= book.creator %></a></li>
   <% end %>
 </ul>

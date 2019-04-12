@@ -5,7 +5,7 @@
 <ul>
   <% @books.each do |book| %>
     <% if book.user_id == session[:user_id] %>
-      <li><a href="/books/<%= book.id %>" style="color: #ffffff"><%= book.name %>, <%= book.location %></a></li>
+      <li><a href="/books/<%= book.id %>" style="color: #ffffff"><%= book.name %>, <%= book.genre %></a></li>
     <% end %>
   <% end %>
 </ul>

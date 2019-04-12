@@ -23,11 +23,11 @@ class BooksController < ApplicationController
       end
     
       post '/books' do
-        if params[:name].empty? || params[:location].empty?
+        if params[:name].empty? || params[:genre].empty?
           erb :'/books/new', locals: {message: "There seems to be an error. Please try again."}
         else
           user = current_user
-          @book = Book.create(name: params[:name], location: params[:location], user: user_id)
+          @book = Book.create(name: params[:name], genre: params[:genre], user: user_id)
           redirect "/books/#{@book.id}"
         end
       end
@@ -55,12 +55,12 @@ class BooksController < ApplicationController
       end
     
       patch '/books/:id' do
-        if params[:name].empty? || params[:location].empty?
+        if params[:name].empty? || params[:genre].empty?
           @book = Book.find(params[:id])
           erb :'/books/edit', locals: {message: "There seems to be an error. Please try again."}
         else
           @book = Book.find(params[:id])
-          @book.update(name: params[:name], location: params[:location])
+          @book.update(name: params[:name], genre: params[:genre])
           redirect "/books/#{@book.id}"
         end
       end

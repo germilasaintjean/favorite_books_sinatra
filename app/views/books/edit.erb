@@ -10,8 +10,8 @@
   <label for="name">Book Name: </label>
   <input type="text" class="form-control" name="name" value="<% @book.name %>" placeholder="name">
   <br>
-  <label for="location">Book Location: </label>
-  <input type="text" class="form-control" name="location" value="<% @book.location %>" placeholder="location">
+  <label for="genre">Book genre: </label>
+  <input type="text" class="form-control" name="genre" value="<% @book.genre %>" placeholder="genre">
   <br>
   <input type="submit" class="btn btn-default" value="Submit">
   <button type="button" class="btn btn-default" name="cancel"><a href="/books/<%= @book.id %>">Cancel</a></button>
